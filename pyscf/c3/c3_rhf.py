@@ -1,9 +1,9 @@
 import numpy as np
 from pyscf import gto, scf, cc
 
-geofile = "../../geometry/c3a/B.xyz"
+geofile = "../../system/c3a/B.xyz"
 with open(geofile, 'r') as file:
-    atoms = file.read()
+    atoms = ''.join(file.readlines()[2:])  # skip the xyz header
 
 mol = gto.M(atom = atoms,
             basis = "ccpvdz",
