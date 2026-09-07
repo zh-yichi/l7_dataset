@@ -1,0 +1,84 @@
+
+LNO-AFQMC Started
+Hostname:     gpue08.delta.ncsa.illinois.edu
+System:       Linux
+Node:         gpue08.delta.ncsa.illinois.edu
+Release:      5.14.0-570.131.1.el9_6.x86_64
+Machine:      x86_64
+Processor:    x86_64
+JAX backend:  GPU
+JAX devices:  [CudaDevice(id=0)]
+Device kind:  NVIDIA H200
+Platform:     gpu
+
+QMC Parameters
+eql_time        -         30
+n_prop_steps    -         50
+n_blocks        -        840
+n_walkers       -        300
+max_memory      -     400000
+mix_precision   -       True
+seed            -       4267
+walker_type     -        rhf
+trial           - pt2ccsd_sto_chol
+chol_cost_ratio -       0.16
+max_error       -    7.2e-05
+dt              -      0.005
+n_exp_terms     -          6
+n_batch         -          1
+nchol_chunk     -        100
+free_projection -      False
+
+QMC System
+Number of Occ. Orbitals:      59
+Number of Act. Orbitals:      282
+Number of Chol. Vectors:      1961
+Mean-Field Energy:            -1832.00523770
+Maximum memory per walker:            1333.33 MB
+Maximum number of Cholesky per chunk: 1098
+Number of Cholesky chunks:            2
+Number of Cholesky per chunk:         981
+Number of padding Cholesky:           1
+Trial:   pt2ccsd_sto_chol(norb=282, nelec=(59, 59), n_batch=1, nchol_chunk=981, mix_precision=True, n_chol_head=0, head_chol_ratio=None, n_chol_samples=None, chol_cost_ratio=0.16, head_sample_ratio=3.0, chol_score_floor=1e-06, chol_uniform_mix=0.01, head_from_guide=False)
+Sampler: sampler_pt2_sto_chol(n_prop_steps=50, n_blocks=840, n_chol=1961, frozen_vir=0)
+
+Initalize QMC walkers by HF
+
+Equilibration
+Initial Orbital energy: -0.13982
+inv_T  nodes      weight      energy     error   runTime
+ 0.00      0   300.00000  -1832.00132   0.00000     49.61
+ 3.00      0   313.37257  -1834.49187   0.03139     67.09
+ 6.00      0   302.54092  -1834.56974   0.03585     79.06
+ 9.00      0   297.40175  -1834.55045   0.03432     91.47
+12.00      0   296.05193  -1834.56545   0.03535    103.52
+15.00      0   298.69415  -1834.56069   0.03903    115.64
+18.00      0   296.42365  -1834.58048   0.03951    127.31
+21.00      0   297.38783  -1834.59976   0.03635    139.01
+24.00      0   296.99934  -1834.54863   0.04335    151.07
+27.00      0   297.92815  -1834.58786   0.03428    163.22
+30.00      0   297.56805  -1834.56771   0.03390    175.25
+
+Sampling Blocks
+Target Final Error ~ 0.000072
+   N  nodes      weight      E(Guide)     Error     weightp    E_frag     Error      Time
+  20      0   297.08850   -1834.57009   0.00755   308.02984  -0.14747   0.00058    251.34
+  40      0   296.85320   -1834.56106   0.00551   307.80108  -0.14671   0.00034    319.41
+  60      0   297.53724   -1834.54965   0.00468   307.66160  -0.14638   0.00026    387.18
+  80      0   297.48164   -1834.55112   0.00418   307.48541  -0.14658   0.00024    457.33
+ 100      0   296.69900   -1834.55244   0.00360   307.33686  -0.14681   0.00023    526.34
+ 120      0   298.64784   -1834.55527   0.00338   307.38453  -0.14683   0.00020    595.39
+ 140      0   295.91257   -1834.55857   0.00332   307.39280  -0.14699   0.00019    662.87
+ 160      0   297.58545   -1834.56288   0.00313   307.37316  -0.14694   0.00017    730.23
+ 180      0   297.38597   -1834.56440   0.00295   307.29079  -0.14684   0.00016    797.53
+ 200      0   297.40499   -1834.56746   0.00284   307.24355  -0.14681   0.00015    865.08
+ 220      0   297.83788   -1834.56710   0.00265   307.21957  -0.14693   0.00015    932.19
+ 240      0   296.51854   -1834.56674   0.00251   307.20099  -0.14699   0.00015    999.34
+ 260      0   295.65429   -1834.56542   0.00249   307.18919  -0.14697   0.00014   1066.06
+ 280      0   296.18540   -1834.56603   0.00239   307.17416  -0.14695   0.00013   1133.58
+ 300      0   297.12093   -1834.56576   0.00227   307.13083  -0.14700   0.00013   1205.72
+ 320      0   297.95974   -1834.56724   0.00223   307.11659  -0.14706   0.00013   1273.18
+ 340      0   297.68560   -1834.56600   0.00214   307.13229  -0.14697   0.00013   1340.58
+ 360      0   295.44425   -1834.56645   0.00205   307.13067  -0.14692   0.00012   1407.58
+ 380      0   297.36034   -1834.56713   0.00203   307.17658  -0.14697   0.00012   1474.93
+ 400      0   297.28470   -1834.56672   0.00195   307.20504  -0.14688   0.00012   1542.15

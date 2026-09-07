@@ -1,0 +1,9 @@
+E0514 06:03:21.289467  628713 slow_operation_alarm.cc:73] 
+********************************
+[Compiling module jit_cderi2mo_gpu for GPU] Very slow compile? If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+********************************
+E0514 06:23:15.233406  627705 slow_operation_alarm.cc:140] The operation took 21m53.944067134s
+
+********************************
+[Compiling module jit_cderi2mo_gpu for GPU] Very slow compile? If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+********************************

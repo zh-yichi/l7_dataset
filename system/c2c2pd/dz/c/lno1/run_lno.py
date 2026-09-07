@@ -11,18 +11,21 @@ atoms = ''.join(open(path2geo).readlines()[2:])  # skip the atom count and comme
 ####################################
 
 mol = gto.M(atom=atoms,
-            basis='sto6g',
+            basis='ccpvdz',
             verbose=4,
             unit='A',
             symmetry=0,
             charge=0,
             spin=0,
-            max_memory=20000,
+            max_memory=200000,
             )
 
 # density fitting: 792 AOs, conventional 4-index ERIs would not fit
 mf = scf.RHF(mol).density_fit()
+mf.with_df._cderi_to_save = path2eri
+# mf.with_df._cderi = path2eri
 mf.chkfile = path2chk
+mf.init_guess = 'chk'
 mf.kernel()
 
 stable = False
@@ -41,16 +44,16 @@ lo_coeff, frag_list, frag_name \
     = tools.iao_fragment(mf, 
                          frag_type='h2heavy', 
                          more_loc='pm',
-                         save2= path2iao)
+                         save2=path2iao
+                         )
 
-options = {'eql_time': 10,
+options = {'eql_time': 30,
            'n_prop_steps': 50,
-           'n_blocks': 200,
-           'n_walkers': 50,
-           'max_memory': 10000,
+           'n_blocks': 840,
+           'n_walkers': 300,
+           'max_memory': 200000,
            'mix_precision': True,
-           'n_batch': 1,
-           'seed': 18,
+           'seed': 27,
            'walker_type': 'rhf',
            'trial': 'pt2ccsd',
            }
@@ -60,14 +63,14 @@ lno_afqmc.run_afqmc(
     lo_coeff,
     frag_list,
     frag_name,
-    lno_thresh = 1e-5,
+    lno_thresh = 3e-5,
     qmc_options = options,
     chol_cut = 1e-5,
-    target_qmc_err = 1e-3,
-    run_frag = [0],
+    target_qmc_err = 5e-4,
+    run_frag = None,
     nfrozen = None,
     run_mp = True,
     run_cc = True,
     run_qmc = True,
-    plot_las = False,
+    plot_las = True,
     )

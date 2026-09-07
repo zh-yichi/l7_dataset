@@ -1,0 +1,91 @@
+---------------------------- AFQMC Sampling Started ----------------------------
+Hostname: gpua004.delta.ncsa.illinois.edu
+System Type: Linux
+Machine Type: x86_64
+Processor: x86_64
+Using GPU.
+System: Linux
+Node Name: gpua004.delta.ncsa.illinois.edu
+Release: 5.14.0-427.91.1.el9_4.x86_64
+Version: #1 SMP PREEMPT_DYNAMIC Wed Sep 17 10:08:59 EDT 2025
+Machine: x86_64
+Processor: x86_64
+Trial: ccsd_pt2(norb=215, nelec=(40, 40), n_batch=1, nchol_chunk=100, mix_precision=True)
+Sampler: sampler_pt2(n_prop_steps=50, n_blocks=500, n_chol=1857)
+norb: 215
+nelec: (40, 40)
+nchol: 1857
+n_eql: 100
+n_prop_steps: 50
+n_blocks: 500
+n_walkers: 300
+nchol_chunk: 100
+mix_precision: True
+n_batch: 1
+seed: 809
+walker_type: rhf
+trial: ccsd_pt2
+dt: 0.005
+use_gpu: True
+max_error: 5.892556509887897e-05
+n_exp_terms: 6
+
+============================== Fragment46 Results ==============================
+	 Center Atom C
+	AOs with contribution > 0.01
+        AO Label     Amp
+     45 C 1s      0.8755
+     45 C 2px     0.4887
+     45 C 2py     0.4813
+     45 C 2pz     0.4673
+     45 C 2s      0.3711
+     45 C 3pz     0.2603
+     45 C 3s      0.1881
+     45 C 3px     0.1502
+     45 C 3py     0.1445
+     46 C 3dxy    0.0889
+    47 C 3dx2-y2  0.0878
+     47 C 3py     0.0811
+     44 C 3px     0.0749
+     44 C 3dxy    0.0656
+     46 C 3px     0.0638
+     46 C 3s      0.0627
+    44 C 3dx2-y2  0.0600
+     47 C 3s      0.0598
+     44 C 3s      0.0594
+     46 C 3py     0.0498
+    46 C 3dx2-y2  0.0496
+     46 C 3pz     0.0455
+     47 C 3dyz    0.0428
+     44 C 3pz     0.0427
+     47 C 3dxy    0.0420
+     47 C 3pz     0.0418
+     44 C 3py     0.0375
+     44 C 3dxz    0.0370
+     46 C 3dxz    0.0323
+     47 C 3px     0.0298
+     46 C 3dz^2   0.0241
+     47 C 3dz^2   0.0229
+     44 C 3dz^2   0.0225
+     46 C 2s      0.0204
+      2 C 3py     0.0193
+     43 C 3px     0.0190
+     44 C 2s      0.0180
+     47 C 2s      0.0177
+     46 C 3dyz    0.0173
+     66 H 2s      0.0168
+     67 H 2s      0.0162
+     49 C 3py     0.0160
+     17 C 3py     0.0153
+     47 C 2py     0.0145
+     45 C 3dz^2   0.0135
+     44 C 2px     0.0118
+     46 C 2px     0.0103
+--------------------------------------------------------------------------------
+	 LNO-Active Space electrons: 40 | orbitals: 215 
+	 LNO-MP2 Orbital Energy:   -0.11927169 
+	 LNO-CCSD Orbital Energy:  -0.11922735 
+	 LNO-AFQMC Orbital Energy: -0.124065 +/- 0.000114 
+	 LNO-CCSD Time:  378.98 
+	 LNO-AFQMC Time: 1863.54 
+================================================================================
